@@ -8,6 +8,8 @@ import 'package:tdd_test_app/features/number_trivia/data/models/number_trivia_mo
 import 'package:tdd_test_app/features/number_trivia/domain/entities/number_trivia_model.dart';
 import 'package:tdd_test_app/features/number_trivia/domain/repositories/number_trivia_repo.dart';
 
+typedef Future<NumberTriviaModel> _ConcreteRandomChooser();
+
 class NumbeTriviaRepoImpl implements NumberTriviaRepo {
   final NumberTriviaLocalDs _localDataSource;
   final NumberTriviaRemoteDs _remoteDataSource;
@@ -33,7 +35,7 @@ class NumbeTriviaRepoImpl implements NumberTriviaRepo {
   }
 
   Future<Either<Failure, NumberTriviaEntity>> _callTriviaFuntion(
-      Future<NumberTriviaModel> Function() getConcreteOrRandomTrivia) async {
+      _ConcreteRandomChooser getConcreteOrRandomTrivia) async {
     if (await _networkInfo.isConnected) {
       try {
         final response = await getConcreteOrRandomTrivia();
