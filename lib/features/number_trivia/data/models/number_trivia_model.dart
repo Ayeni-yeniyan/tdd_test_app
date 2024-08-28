@@ -6,10 +6,14 @@ class NumberTriviaModel extends NumberTriviaEntity {
     required super.text,
   });
 
-  factory NumberTriviaModel.fromJson(Map<String, dynamic> map) {
-    return NumberTriviaModel(
-      number: (map['number'] as num).toInt(),
-      text: map['text'] as String,
-    );
-  }
+  factory NumberTriviaModel.fromJson(Map<String, dynamic> map) =>
+      NumberTriviaModel(
+        number: (map['number'] as num).toInt(),
+        text: map['text'] as String,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'number': number,
+        'text': text,
+      };
 }

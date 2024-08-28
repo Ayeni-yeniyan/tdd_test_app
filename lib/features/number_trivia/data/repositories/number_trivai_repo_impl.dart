@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:tdd_test_app/core/error/exceptions.dart';
 import 'package:tdd_test_app/core/error/failure.dart';
-import 'package:tdd_test_app/core/platform/network_info.dart';
+import 'package:tdd_test_app/core/network/network_info.dart';
 import 'package:tdd_test_app/features/number_trivia/data/data_sources/number_trivia_local_ds.dart';
 import 'package:tdd_test_app/features/number_trivia/data/data_sources/numbertrivia_remote_ds.dart';
 import 'package:tdd_test_app/features/number_trivia/data/models/number_trivia_model.dart';

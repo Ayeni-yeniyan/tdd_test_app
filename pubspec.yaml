@@ -8,22 +8,44 @@ environment:
   sdk: '>=3.4.4 <4.0.0'
 
 dependencies:
-  connectivity_plus: ^6.0.5
+# Flutter dependencie
   cupertino_icons: ^1.0.6
-  dartz: ^0.10.1
-  dio: ^5.6.0
-  equatable: ^2.0.5
   flutter:
     sdk: flutter
+
+# Functional Programming package
+  dartz: ^0.10.1
+# HTTP networking package
+  dio: ^5.6.0
+# dio API client generator dependencies
+  retrofit: '>=4.0.0 <5.0.0'
+  json_annotation: ^4.8.1
+# Connection checker package
+  internet_connection_checker: ^2.0.0
+# Comparision and equality package
+  equatable: ^2.0.5
+# Service locator
   get_it: ^7.7.0
+# Logging package
   logger: ^2.4.0
+# Mock Test package
   mocktail: ^1.0.4
-  shared_preferences: ^2.3.1
+# Local database package
+  hive: ^2.2.3
+  path_provider: ^2.1.0
 
 dev_dependencies:
+# Flutter dev dependencie
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
+
+# dio API client generator dev dependencies
+  retrofit_generator: '>=7.0.0 <8.0.0' 
+  build_runner: '>=2.3.0 <4.0.0'
+  json_serializable: ^6.6.2
+
+
 flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
