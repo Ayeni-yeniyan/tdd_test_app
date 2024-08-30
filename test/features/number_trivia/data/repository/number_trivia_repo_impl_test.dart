@@ -120,13 +120,13 @@ void main() {
       test('should retrieve locally cached data when cache is present',
           () async {
         // arrange
-        when(() => mockLocalDataSource.getLastNumberTrivia())
+        when(() => mockLocalDataSource.getRandomNumberTrivia())
             .thenAnswer((_) async => tNumberTriviaModel);
         // act
         final response = await repository.getConcreteNumberTrivia(tNumber);
         // assert
 
-        verify(() => mockLocalDataSource.getLastNumberTrivia());
+        verify(() => mockLocalDataSource.getRandomNumberTrivia());
         verifyZeroInteractions(mockRemoteDataSource);
         expect(response, equals(const Right(tNumberTrivia)));
       });
@@ -134,13 +134,13 @@ void main() {
           'should return cacheexception when there is no locally cached data present',
           () async {
         // arrange
-        when(() => mockLocalDataSource.getLastNumberTrivia())
+        when(() => mockLocalDataSource.getRandomNumberTrivia())
             .thenThrow(CacheException('test'));
         // act
         final response = await repository.getConcreteNumberTrivia(tNumber);
         // assert
 
-        verify(() => mockLocalDataSource.getLastNumberTrivia());
+        verify(() => mockLocalDataSource.getRandomNumberTrivia());
         verifyZeroInteractions(mockRemoteDataSource);
         expect(response, equals(const Left(CacheFailure())));
       });
@@ -211,13 +211,13 @@ void main() {
       test('should retrieve locally cached data when cache is present',
           () async {
         // arrange
-        when(() => mockLocalDataSource.getLastNumberTrivia())
+        when(() => mockLocalDataSource.getRandomNumberTrivia())
             .thenAnswer((_) async => tNumberTriviaModel);
         // act
         final response = await repository.getRandomNumberTrivia();
         // assert
 
-        verify(() => mockLocalDataSource.getLastNumberTrivia());
+        verify(() => mockLocalDataSource.getRandomNumberTrivia());
         verifyZeroInteractions(mockRemoteDataSource);
         expect(response, equals(const Right(tNumberTrivia)));
       });
@@ -225,13 +225,13 @@ void main() {
           'should return cacheexception when there is no locally cached data present',
           () async {
         // arrange
-        when(() => mockLocalDataSource.getLastNumberTrivia())
+        when(() => mockLocalDataSource.getRandomNumberTrivia())
             .thenThrow(CacheException('test'));
         // act
         final response = await repository.getRandomNumberTrivia();
         // assert
 
-        verify(() => mockLocalDataSource.getLastNumberTrivia());
+        verify(() => mockLocalDataSource.getRandomNumberTrivia());
         verifyZeroInteractions(mockRemoteDataSource);
         expect(response, equals(const Left(CacheFailure())));
       });

@@ -46,7 +46,7 @@ class NumbeTriviaRepoImpl implements NumberTriviaRepo {
       }
     }
     try {
-      final response = await _localDataSource.getLastNumberTrivia();
+      final response = await _localDataSource.getRandomNumberTrivia();
       return right(response);
     } on CacheException {
       return left(const CacheFailure());
