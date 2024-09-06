@@ -14,8 +14,6 @@ class MockRestClient extends Mock implements RestClient {}
 
 class MockDio extends Mock implements Dio {}
 
-// class MockNumberTriviaRemoteDsImpl extends Mock implements NumberTriviaRemoteDsImpl{}
-
 void main() {
   late MockRestClient mockRestClient;
   late NumberTriviaRemoteDsImpl remoteDsImpl;

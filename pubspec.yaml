@@ -21,8 +21,10 @@ dependencies:
   internet_connection_checker: ^2.0.0
 # Comparision and equality package
   equatable: ^2.0.5
+# State manager
+# Navigation manager
 # Service locator
-  get_it: ^7.7.0
+  get: ^4.6.6
 # Logging package
   logger: ^2.4.0
 # Mock Test package

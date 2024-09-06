@@ -13,11 +13,11 @@ class MockNumberTriviaRepo extends Mock implements NumberTriviaRepo {}
 
 void main() {
   late MockNumberTriviaRepo mockNumberTriviaRepository;
-  late GetRanddomNumberTrivia usecase;
+  late GetRandomNumberTrivia usecase;
   group('getConcreteNumberTrivia -', () {
     setUp(() {
       mockNumberTriviaRepository = MockNumberTriviaRepo();
-      usecase = GetRanddomNumberTrivia(mockNumberTriviaRepository);
+      usecase = GetRandomNumberTrivia(mockNumberTriviaRepository);
     });
     const tNumberTrivia = NumberTriviaEntity(number: 1, text: 'test entity');
     test('should get trivia from the repository', () async {
