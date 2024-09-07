@@ -11,12 +11,14 @@ class InputConverter {
 
       return right(convertedInt);
     } catch (e) {
-      return left(InvalidInputFailure());
+      return left(const InvalidInputFailure());
     }
   }
 }
 
 class InvalidInputFailure extends Failure {
+  const InvalidInputFailure()
+      : super('Invalid input. Input must be an integer greater than 0');
   @override
   List<Object?> get props => [];
 }

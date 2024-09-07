@@ -28,7 +28,7 @@ class NumberTriviaRemoteDsImpl implements NumberTriviaRemoteDs {
     } catch (e) {
       if (e is DioException) {
         throw ServerException(
-          message: e.message,
+          message: e.response!.data ?? 'An error occured',
         );
       }
       throw ServerException(message: e.toString());

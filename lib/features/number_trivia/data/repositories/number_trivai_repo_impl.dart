@@ -8,7 +8,7 @@ import 'package:tdd_test_app/features/number_trivia/data/models/number_trivia_mo
 import 'package:tdd_test_app/features/number_trivia/domain/entities/number_trivia_model.dart';
 import 'package:tdd_test_app/features/number_trivia/domain/repositories/number_trivia_repo.dart';
 
-typedef Future<NumberTriviaModel> _ConcreteRandomChooser();
+typedef _ConcreteRandomChooser = Future<NumberTriviaModel> Function();
 
 class NumbeTriviaRepoImpl implements NumberTriviaRepo {
   final NumberTriviaLocalDs _localDataSource;
